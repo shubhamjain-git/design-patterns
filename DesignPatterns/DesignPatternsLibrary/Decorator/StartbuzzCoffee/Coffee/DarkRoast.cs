@@ -9,7 +9,12 @@
 
         public override float Cost()
         {
-            return 0.99f;
+            float cost = 0.99f;
+            if (size == Size.MEDIUM)
+                return cost + 0.10f;
+            if (size == Size.LARGE)
+                return cost + 0.15f;
+            return cost;
         }
     }
 }

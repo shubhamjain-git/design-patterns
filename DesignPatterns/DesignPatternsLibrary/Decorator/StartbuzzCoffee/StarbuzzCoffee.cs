@@ -22,6 +22,13 @@ namespace DesignPatternsLibrary.Decorator.StartbuzzCoffee
             beverage3 = new Mocha(beverage3);
             beverage3 = new Whip(beverage3);
             Console.WriteLine(beverage3.GetDescription() + " $" + beverage3.Cost());
+
+            Beverage beverage4 = new HouseBlend();
+            beverage4.SetSize(Beverage.Size.MEDIUM);
+            beverage4 = new Soy(beverage4);
+            beverage4 = new Mocha(beverage4);
+            beverage4 = new Whip(beverage4);            
+            Console.WriteLine(beverage4.GetSize() + " " + beverage4.GetDescription() + " $" + beverage4.Cost());
         }
 
         public Beverage GetBeverage(string beverageName)

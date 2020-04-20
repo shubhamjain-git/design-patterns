@@ -2,8 +2,6 @@
 {
     public class Mocha : CondimentDecorator
     {
-        private readonly Beverage beverage;
-
         public Mocha(Beverage beverage)
         {
             this.beverage = beverage;
@@ -11,7 +9,14 @@
 
         public override float Cost()
         {
-            return beverage.Cost() + 0.20f;
+            float cost = beverage.Cost();
+            if (beverage.GetSize() == Size.SMALL)
+                cost += .20f;
+            else if (beverage.GetSize() == Size.MEDIUM)
+                cost += .30f;
+            else if (beverage.GetSize() == Size.LARGE)
+                cost += .40f;
+            return cost;
         }
 
         public override string GetDescription()
