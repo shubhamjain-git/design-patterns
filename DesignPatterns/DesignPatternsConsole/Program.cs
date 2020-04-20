@@ -38,6 +38,7 @@ namespace DesignPatternsConsole
 
                     default:
                         Console.WriteLine("Enter valid option!!");
+                        Console.Clear();
                         continue;
                 }
 
