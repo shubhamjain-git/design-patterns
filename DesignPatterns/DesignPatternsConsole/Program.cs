@@ -43,15 +43,16 @@ namespace DesignPatternsConsole
 
                 PrintSummary(patternName);
                 RunExample(patternName);
-                WaitForUserInput();
+                selectedOption = WaitAndGetUserInput();
             }            
         }
 
-        private static void WaitForUserInput()
+        private static int WaitAndGetUserInput()
         {
             Console.WriteLine("Press any key to go to Main Menu or Enter 5 to Exit!");
-            Console.ReadKey();
+            int selectedOption = ReadInputFromConsole();
             Console.Clear();
+            return selectedOption;
         }
 
         private static void RunExample(string patternName)
