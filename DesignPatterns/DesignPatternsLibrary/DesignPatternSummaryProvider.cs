@@ -51,6 +51,15 @@ namespace DesignPatternsLibrary
                     };
                     return summary;
 
+                case DesignPatternConstants.SIMPLE_FACTORY:
+                    summary = new DesignPatternSummary
+                    {
+                        Name = "The Simple Factory",
+                        Definition = "The Simple Factory isn't actually a Design Paaterm; it's more of a programming idiom.",
+                        Example = "Pizza Store (Only one store)"
+                    };
+                    return summary;
+
                 case DesignPatternConstants.FACTORY_METHOD:
                     summary = new DesignPatternSummary
                     {
@@ -58,7 +67,7 @@ namespace DesignPatternsLibrary
                         Definition = "The Factory Method Pattern defines an interface for creating an object,"
                             + " but lets subclasses decide which class to intantiate."
                             + " Factory method lets a class defer instantiation to subclasses.",
-                        Example = "Pizza Store"
+                        Example = "Pizza Store (Multiple stores in different cities"
                     };
                     return summary;
 

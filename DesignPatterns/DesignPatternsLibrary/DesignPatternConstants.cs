@@ -10,6 +10,7 @@ namespace DesignPatternsLibrary
         public const string STRATEGY = "Strategy";
         public const string OBSERVER = "Observer";
         public const string DECORATOR = "Decorator";
+        public const string SIMPLE_FACTORY = "SimpleFactory";
         public const string FACTORY_METHOD = "FactoryMethod";
         public const string ABSTRACT_FACTORY = "AbstractFactory";
         public const string COMMAND = "Command";

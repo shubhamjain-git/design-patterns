@@ -7,9 +7,9 @@ namespace DesignPatternsConsole
     {
         static void Main(string[] args)
         {
-            int selectedOption = 0;            
+            int selectedOption = -1;            
           
-            while(selectedOption != 5)
+            while(selectedOption != 0)
             {
                 DisplayMainMenu();
                 selectedOption = ReadInputFromConsole();
@@ -34,6 +34,10 @@ namespace DesignPatternsConsole
                         break;
 
                     case 5:
+                        patternName = DesignPatternConstants.SIMPLE_FACTORY;
+                        break;
+
+                    case 0:
                         continue;
 
                     default:
@@ -50,7 +54,7 @@ namespace DesignPatternsConsole
 
         private static int WaitAndGetUserInput()
         {
-            Console.WriteLine("Press any key to go to Main Menu or Enter 5 to Exit!");
+            Console.WriteLine("Press any key to go to Main Menu or Enter 0 to Exit!");
             int selectedOption = ReadInputFromConsole();
             Console.Clear();
             return selectedOption;
@@ -73,13 +77,14 @@ namespace DesignPatternsConsole
             Console.WriteLine("Enter 2 for Strategy Pattern");
             Console.WriteLine("Enter 3 for Observer Pattern");
             Console.WriteLine("Enter 4 for Decorator Pattern");
-            Console.WriteLine("Enter 5 for Exit");
+            Console.WriteLine("Enter 5 for Simple Factory");
+            Console.WriteLine("Enter 0 for Exit");
         }
 
         private static int ReadInputFromConsole()
         {
             String input = Console.ReadLine();
-            int selectedOption = 0;
+            int selectedOption = -1;
             try
             {
                 selectedOption = Convert.ToInt32(input);
