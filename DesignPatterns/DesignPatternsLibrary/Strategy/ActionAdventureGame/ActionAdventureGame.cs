@@ -36,5 +36,10 @@ namespace DesignPatternsLibrary.Strategy.ActionAdventureGame
             }
             return character;
         }
+
+        public void RunExample()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

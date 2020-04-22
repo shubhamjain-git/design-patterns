@@ -11,16 +11,7 @@ namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
         public PizzaStore(SimplePizzaFactory factory)
         {
             this.factory = factory;
-
             Console.WriteLine("Welcome to SAM Pizza Store!");
-
-            Pizza pizza = OrderPizza("cheese");
-            Console.WriteLine(pizza.GetName() + " was ordered\n");
-            Console.WriteLine(pizza);
-
-            pizza = OrderPizza("veggie");
-            Console.WriteLine(pizza.GetName() + " was ordered\n");
-            Console.WriteLine(pizza);
         }
 
         public Pizza OrderPizza(String type)
@@ -33,6 +24,17 @@ namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
             pizza.Box();
 
             return pizza;
+        }
+
+        public void RunExample()
+        {
+            Pizza pizza = OrderPizza("cheese");
+            Console.WriteLine(pizza.GetName() + " was ordered\n");
+            Console.WriteLine(pizza);
+
+            pizza = OrderPizza("veggie");
+            Console.WriteLine(pizza.GetName() + " was ordered\n");
+            Console.WriteLine(pizza);
         }
     }
 }

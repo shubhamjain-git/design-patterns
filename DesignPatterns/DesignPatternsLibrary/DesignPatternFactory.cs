@@ -10,38 +10,43 @@ namespace DesignPatternsLibrary
 {
     public class DesignPatternsFactory
     {
-        public static IDesignPattern GetInstance(String pattern)
+        public static IDesignPattern GetInstance(String patternName)
         {
-            switch (pattern)
+            IDesignPattern designPattern;
+
+            switch (patternName)
             {
                 case DesignPatternConstants.SINGLETON:
-                    IDesignPattern chocolateBoiler = ChocolateBoiler.GetSynchronizedInstance();
-                    return chocolateBoiler;
+                    designPattern = ChocolateBoiler.GetSynchronizedInstance();
+                    break;
 
                 case DesignPatternConstants.STRATEGY:
-                    IDesignPattern miniDuckSimulator = new MiniDuckSimulator();
-                    return miniDuckSimulator;
+                    designPattern = new MiniDuckSimulator();
+                    break;
 
                 case DesignPatternConstants.OBSERVER:
-                    IDesignPattern weatherStation = new WeatherStation();
-                    return weatherStation;
+                    designPattern = new WeatherStation();
+                    break;
 
                 case DesignPatternConstants.DECORATOR:
-                    IDesignPattern starbuzzCoffee = new StarbuzzCoffee();
-                    return starbuzzCoffee;
+                    designPattern = new StarbuzzCoffee();                    
+                    break;
 
                 case DesignPatternConstants.SIMPLE_FACTORY:
                     SimplePizzaFactory factory = new SimplePizzaFactory();
-                    IDesignPattern pizzaStore = new SimpleFactory.PizzaStore.PizzaStore(factory);
-                    return pizzaStore;
+                    designPattern = new SimpleFactory.PizzaStore.PizzaStore(factory);
+                    break;
 
                 case DesignPatternConstants.FACTORY_METHOD:
-                    IDesignPattern franchisor = new PizzaStoreFranchisor();
-                    return franchisor;
+                    designPattern = new PizzaStoreFranchisor();
+                    break;
 
                 default:
-                    return null;
+                    throw new NotImplementedException();
             }
+
+            designPattern.RunExample();
+            return designPattern;
         }
     }
 }

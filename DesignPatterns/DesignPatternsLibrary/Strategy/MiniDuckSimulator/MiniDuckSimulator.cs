@@ -12,15 +12,7 @@ namespace DesignPatternsLibrary.Strategy.MiniDuckSimulator
 
         public MiniDuckSimulator()
         {
-            Console.WriteLine("!!Mini Duck Simulator Demo!!");
-            Console.WriteLine("Created an instance of Model Duck.");
-            duck = new ModelDuck();
-            duck.Display();
-            duck.PerformFly();
-            duck.PerformQuack();
-            Console.WriteLine("Changing the fly behavior of Model Duck.");
-            duck.SetFlyBehavior(new FlyRocketPowered());
-            duck.PerformFly();
+            Console.WriteLine("!!Welcome to Mini Duck Simulator!!");
         }
 
         public Duck GetDuckInstance(string duckName)
@@ -52,6 +44,19 @@ namespace DesignPatternsLibrary.Strategy.MiniDuckSimulator
             }
 
             return duck;
+        }
+
+        public void RunExample()
+        {
+            Console.WriteLine("!!Mini Duck Simulator Demo!!");
+            Console.WriteLine("Created an instance of Model Duck.");
+            duck = new ModelDuck();
+            duck.Display();
+            duck.PerformFly();
+            duck.PerformQuack();
+            Console.WriteLine("Changing the fly behavior of Model Duck.");
+            duck.SetFlyBehavior(new FlyRocketPowered());
+            duck.PerformFly();
         }
     }
 }

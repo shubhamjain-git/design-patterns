@@ -4,17 +4,12 @@ namespace DesignPatternsLibrary.Observer.WeatherStation
 {
     public class WeatherStation : IDesignPattern
     {
-        private WeatherData weatherData = new WeatherData();
+        private readonly WeatherData weatherData = new WeatherData();
         IDisplayElement display;
 
         public WeatherStation()
         {
             Console.WriteLine("!!Welcome to the Shubham's Weather Station!!");
-
-            display = new CurrentConditionsDisplay(weatherData);
-            weatherData.SetMeasurements(80, 65, 30.4f);
-            weatherData.SetMeasurements(82, 70, 29.2f);
-            weatherData.SetMeasurements(78, 90, 30.4f);
         }
 
         public WeatherData GetWeatherDataInstance()
@@ -50,6 +45,14 @@ namespace DesignPatternsLibrary.Observer.WeatherStation
                     throw new NotImplementedException();
             }
             return display;
+        }
+
+        public void RunExample()
+        {
+            display = new CurrentConditionsDisplay(weatherData);
+            weatherData.SetMeasurements(80, 65, 30.4f);
+            weatherData.SetMeasurements(82, 70, 29.2f);
+            weatherData.SetMeasurements(78, 90, 30.4f);
         }
     }
 }

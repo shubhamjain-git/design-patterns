@@ -17,6 +17,7 @@ namespace DesignPatternsLibrary.Singleton.ChocolateBoiler
         {
             empty = true;
             boiled = false;
+            Console.WriteLine("!!I am a Chocolate Boiler!!");
         }
 
         public static ChocolateBoiler GetInstance()
@@ -75,6 +76,13 @@ namespace DesignPatternsLibrary.Singleton.ChocolateBoiler
         private bool IsBoiled()
         {
             return boiled;
+        }
+
+        public void RunExample()
+        {
+            uniqueInstance.Fill();
+            uniqueInstance.Boil();
+            uniqueInstance.Drain();
         }
     }
 }
