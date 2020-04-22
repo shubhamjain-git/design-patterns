@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
+﻿namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
 {
     public class VeggiePizza : Pizza
     {
