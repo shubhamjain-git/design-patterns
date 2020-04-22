@@ -37,6 +37,10 @@ namespace DesignPatternsConsole
                         patternName = DesignPatternConstants.SIMPLE_FACTORY;
                         break;
 
+                    case 6:
+                        patternName = DesignPatternConstants.FACTORY_METHOD;
+                        break;
+
                     case 0:
                         continue;
 
@@ -78,6 +82,7 @@ namespace DesignPatternsConsole
             Console.WriteLine("Enter 3 for Observer Pattern");
             Console.WriteLine("Enter 4 for Decorator Pattern");
             Console.WriteLine("Enter 5 for Simple Factory");
+            Console.WriteLine("Enter 6 for Factory Method Pattern");
             Console.WriteLine("Enter 0 for Exit");
         }
 

@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="FactoryMethod\" />
     <Folder Include="Command\" />
     <Folder Include="Adapter\" />
     <Folder Include="Facade\" />
