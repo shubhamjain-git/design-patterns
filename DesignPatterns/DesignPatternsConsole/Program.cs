@@ -45,8 +45,9 @@ namespace DesignPatternsConsole
                         continue;
 
                     default:
-                        Console.WriteLine("Enter valid option!!");
                         Console.Clear();
+                        Console.WriteLine("Enter valid option!! Press any key to go back to Main Menu.");
+                        Console.ReadKey();
                         continue;
                 }
 
@@ -60,7 +61,6 @@ namespace DesignPatternsConsole
         {
             Console.WriteLine("Press any key to go to Main Menu or Enter 0 to Exit!");
             int selectedOption = ReadInputFromConsole();
-            Console.Clear();
             return selectedOption;
         }
 
@@ -70,11 +70,11 @@ namespace DesignPatternsConsole
             Console.WriteLine("Creating instance of pattern and running the example...");
             DesignPatternsFactory.GetInstance(patternName);
             Console.WriteLine("");
-            
         }
 
         private static void DisplayMainMenu()
         {
+            Console.Clear();
             Console.WriteLine("Welcome to Library of Design Patterns");
             Console.WriteLine("Select Design Pattern from the following:");
             Console.WriteLine("Enter 1 for Singleton Pattern");
