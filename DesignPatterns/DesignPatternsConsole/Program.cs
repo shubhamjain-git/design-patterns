@@ -52,8 +52,8 @@ namespace DesignPatternsConsole
                 }
 
                 PrintSummary(patternName);
-                RunExample(patternName);
-                selectedOption = WaitAndGetUserInput();
+                if(RunExample(patternName))
+                    selectedOption = WaitAndGetUserInput();
             }            
         }
 
@@ -64,12 +64,19 @@ namespace DesignPatternsConsole
             return selectedOption;
         }
 
-        private static void RunExample(string patternName)
+        private static bool RunExample(string patternName)
         {
-            Console.WriteLine("");
-            Console.WriteLine("Creating instance of pattern and running the example...");
-            DesignPatternsFactory.GetInstance(patternName);
-            Console.WriteLine("");
+            Console.WriteLine("\nPress 1 to run the example or any key to go to Main Menu!");
+            int selectedOption = ReadInputFromConsole();
+            if (selectedOption == 1)
+            {
+                Console.WriteLine("\nCreating instance of pattern and running the example...\n");
+                IDesignPattern designPattern = DesignPatternsFactory.GetInstance(patternName);
+                designPattern.RunExample();
+                Console.WriteLine("");
+                return true;
+            }
+            return false;
         }
 
         private static void DisplayMainMenu()

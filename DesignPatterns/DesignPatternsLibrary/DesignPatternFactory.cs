@@ -45,7 +45,6 @@ namespace DesignPatternsLibrary
                     throw new NotImplementedException();
             }
 
-            designPattern.RunExample();
             return designPattern;
         }
     }
