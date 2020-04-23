@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatternsLibrary.FactoryMethod.PizzaStore
+namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
 {
     public class ChicagoStyleCheesePizza : Pizza
     {

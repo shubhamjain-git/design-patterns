@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPatternsLibrary.FactoryMethod.PizzaStore
+namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
 {
     public abstract class Pizza
     {

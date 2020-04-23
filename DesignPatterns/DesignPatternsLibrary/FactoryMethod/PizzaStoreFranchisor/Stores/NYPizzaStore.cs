@@ -1,4 +1,4 @@
-﻿namespace DesignPatternsLibrary.FactoryMethod.PizzaStore
+﻿namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
 {
     public class NYPizzaStore : PizzaStore
     {

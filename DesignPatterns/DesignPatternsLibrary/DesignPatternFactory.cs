@@ -2,7 +2,7 @@
 using DesignPatternsLibrary.Decorator.StartbuzzCoffee;
 using DesignPatternsLibrary.Observer.WeatherStation;
 using DesignPatternsLibrary.SimpleFactory.PizzaStore;
-using DesignPatternsLibrary.FactoryMethod.PizzaStore;
+using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.Singleton.ChocolateBoiler;
 using DesignPatternsLibrary.Strategy.MiniDuckSimulator;
 
