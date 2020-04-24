@@ -8,19 +8,19 @@ namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
         {
             Pizza pizza = null;
 
-            if (type.Equals("cheese"))
+            if (type.Equals(PizzaStoreConstants.CHEESE_PIZZA))
             {
                 pizza = new CheesePizza();
             }
-            else if (type.Equals("pepperoni"))
+            else if (type.Equals(PizzaStoreConstants.PEPPERONI_PIZZA))
             {
                 pizza = new PepperoniPizza();
             }
-            else if (type.Equals("clam"))
+            else if (type.Equals(PizzaStoreConstants.CLAM_PIZZA))
             {
                 pizza = new ClamPizza();
             }
-            else if (type.Equals("veggie"))
+            else if (type.Equals(PizzaStoreConstants.VEGGIE_PIZZA))
             {
                 pizza = new VeggiePizza();
             }

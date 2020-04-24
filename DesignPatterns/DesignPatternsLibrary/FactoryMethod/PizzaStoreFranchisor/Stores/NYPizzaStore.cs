@@ -4,19 +4,19 @@
     {
         public override Pizza CreatePizza(string type)
         {
-			if (type.Equals("cheese"))
+			if (type.Equals(PizzaStoreFranchisorConstants.CHEESE_PIZZA))
 			{
 				return new NYStyleCheesePizza();
 			}
-			else if (type.Equals("veggie"))
+			else if (type.Equals(PizzaStoreFranchisorConstants.VEGGIE_PIZZA))
 			{
 				return new NYStyleVeggiePizza();
 			}
-			else if (type.Equals("clam"))
+			else if (type.Equals(PizzaStoreFranchisorConstants.CLAM_PIZZA))
 			{
 				return new NYStyleClamPizza();
 			}
-			else if (type.Equals("pepperoni"))
+			else if (type.Equals(PizzaStoreFranchisorConstants.PEPPERONI_PIZZA))
 			{
 				return new NYStylePepperoniPizza();
 			}

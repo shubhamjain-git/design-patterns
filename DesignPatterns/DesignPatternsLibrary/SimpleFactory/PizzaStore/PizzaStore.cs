@@ -26,11 +26,11 @@ namespace DesignPatternsLibrary.SimpleFactory.PizzaStore
 
         public void RunExample()
         {
-            Pizza pizza = OrderPizza("cheese");
+            Pizza pizza = OrderPizza(PizzaStoreConstants.CHEESE_PIZZA);
             Console.WriteLine(pizza.GetName() + " was ordered\n");
             Console.WriteLine(pizza);
 
-            pizza = OrderPizza("veggie");
+            pizza = OrderPizza(PizzaStoreConstants.VEGGIE_PIZZA);
             Console.WriteLine(pizza.GetName() + " was ordered\n");
             Console.WriteLine(pizza);
         }

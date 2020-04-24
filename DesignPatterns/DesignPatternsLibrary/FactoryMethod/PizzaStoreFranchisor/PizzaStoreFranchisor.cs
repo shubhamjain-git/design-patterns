@@ -12,11 +12,11 @@ namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
         public PizzaStore GetFranchise(string cityName)
         {
             PizzaStore store = null;
-            if(cityName.Equals("New York"))
+            if(cityName.Equals(PizzaStoreFranchisorConstants.NEW_YORK))
             {
                 store = new NYPizzaStore();
             }
-            else if (cityName.Equals("Chicago"))
+            else if (cityName.Equals(PizzaStoreFranchisorConstants.CHICAGO))
             {
                 store = new ChicagoPizzaStore();
             }
@@ -28,28 +28,28 @@ namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
             PizzaStore nyStore = new NYPizzaStore();
             PizzaStore chicagoStore = new ChicagoPizzaStore();
 
-            Pizza pizza = nyStore.OrderPizza("cheese");
+            Pizza pizza = nyStore.OrderPizza(PizzaStoreFranchisorConstants.CHEESE_PIZZA);
             Console.WriteLine("Ethan ordered a " + pizza.GetName() + "\n");
 
-            pizza = chicagoStore.OrderPizza("cheese");
+            pizza = chicagoStore.OrderPizza(PizzaStoreFranchisorConstants.CHEESE_PIZZA);
             Console.WriteLine("Joel ordered a " + pizza.GetName() + "\n");
 
-            pizza = nyStore.OrderPizza("clam");
+            pizza = nyStore.OrderPizza(PizzaStoreFranchisorConstants.CLAM_PIZZA);
             Console.WriteLine("Ethan ordered a " + pizza.GetName() + "\n");
 
-            pizza = chicagoStore.OrderPizza("clam");
+            pizza = chicagoStore.OrderPizza(PizzaStoreFranchisorConstants.CLAM_PIZZA);
             Console.WriteLine("Joel ordered a " + pizza.GetName() + "\n");
 
-            pizza = nyStore.OrderPizza("pepperoni");
+            pizza = nyStore.OrderPizza(PizzaStoreFranchisorConstants.PEPPERONI_PIZZA);
             Console.WriteLine("Ethan ordered a " + pizza.GetName() + "\n");
 
-            pizza = chicagoStore.OrderPizza("pepperoni");
+            pizza = chicagoStore.OrderPizza(PizzaStoreFranchisorConstants.PEPPERONI_PIZZA);
             Console.WriteLine("Joel ordered a " + pizza.GetName() + "\n");
 
-            pizza = nyStore.OrderPizza("veggie");
+            pizza = nyStore.OrderPizza(PizzaStoreFranchisorConstants.VEGGIE_PIZZA);
             Console.WriteLine("Ethan ordered a " + pizza.GetName() + "\n");
 
-            pizza = chicagoStore.OrderPizza("veggie");
+            pizza = chicagoStore.OrderPizza(PizzaStoreFranchisorConstants.VEGGIE_PIZZA);
             Console.WriteLine("Joel ordered a " + pizza.GetName() + "\n");
         }
     }
