@@ -6,7 +6,7 @@ namespace DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor
     {
         public PizzaStoreFranchisor()
         {
-            RunExample();
+            Console.WriteLine("!!Welcome to PizzaStore Franchisor!!");
         }
 
         public PizzaStore GetFranchise(string cityName)

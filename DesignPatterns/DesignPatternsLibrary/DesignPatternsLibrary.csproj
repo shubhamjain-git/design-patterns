@@ -4,16 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Command\" />
-    <Folder Include="Adapter\" />
-    <Folder Include="Facade\" />
-    <Folder Include="Iterator\" />
-    <Folder Include="Composite\" />
-    <Folder Include="AbstractFactory\" />
-    <Folder Include="Proxy\" />
-    <Folder Include="State\" />
-    <Folder Include="TemplateMethod\" />
-  </ItemGroup>
-
 </Project>

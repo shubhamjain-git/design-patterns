@@ -5,6 +5,7 @@ using DesignPatternsLibrary.SimpleFactory.PizzaStore;
 using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.Singleton.ChocolateBoiler;
 using DesignPatternsLibrary.Strategy.MiniDuckSimulator;
+using DesignPatternsLibrary.AbstractFactory.PizzaIngredientFactory;
 
 namespace DesignPatternsLibrary
 {
@@ -39,6 +40,10 @@ namespace DesignPatternsLibrary
 
                 case DesignPatternConstants.FACTORY_METHOD:
                     designPattern = new PizzaStoreFranchisor();
+                    break;
+
+                case DesignPatternConstants.ABSTRACT_FACTORY:
+                    designPattern = new PizzaTestDrive();
                     break;
 
                 default:
