@@ -1,11 +1,12 @@
 ﻿using System;
-using DesignPatternsLibrary.Decorator.StartbuzzCoffee;
-using DesignPatternsLibrary.Observer.WeatherStation;
-using DesignPatternsLibrary.SimpleFactory.PizzaStore;
-using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.Singleton.ChocolateBoiler;
 using DesignPatternsLibrary.Strategy.MiniDuckSimulator;
+using DesignPatternsLibrary.Observer.WeatherStation;
+using DesignPatternsLibrary.Decorator.StartbuzzCoffee;
+using DesignPatternsLibrary.SimpleFactory.PizzaStore;
+using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.AbstractFactory.PizzaIngredientFactory;
+using DesignPatternsLibrary.Command.RemoteControl;
 
 namespace DesignPatternsLibrary
 {
@@ -44,6 +45,10 @@ namespace DesignPatternsLibrary
 
                 case DesignPatternConstants.ABSTRACT_FACTORY:
                     designPattern = new PizzaTestDrive();
+                    break;
+
+                case DesignPatternConstants.COMMAND:
+                    designPattern = new RemoteLoader();
                     break;
 
                 default:
