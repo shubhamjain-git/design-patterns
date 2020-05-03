@@ -49,6 +49,10 @@ namespace DesignPatternsConsole
                         patternName = DesignPatternConstants.COMMAND;
                         break;
 
+                    case 9:
+                        patternName = DesignPatternConstants.ADAPTER;
+                        break;
+
                     case 0:
                         continue;
 
@@ -100,6 +104,7 @@ namespace DesignPatternsConsole
             Console.WriteLine("Enter 6 for Factory Method Pattern");
             Console.WriteLine("Enter 7 for Abstract Factory Pattern");
             Console.WriteLine("Enter 8 for Command Pattern");
+            Console.WriteLine("Enter 9 for Adapter Pattern");
             Console.WriteLine("Enter 0 for Exit");
         }
 

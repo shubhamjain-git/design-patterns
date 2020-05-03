@@ -93,7 +93,7 @@
                         Name = "The Adapter Pattern",
                         Definition = "The Adapter Pattern converts the interface of a class into another interface the clients expect."
                             + " Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.",
-                        Example = "Duck"
+                        Example = "Duck Adapter"
                     };
                     return summary;
 
@@ -103,7 +103,7 @@
                         Name = "The Facade Pattern",
                         Definition = "The Facade Pattern provided a unified interface to a set of interfaces in a subsystem."
                             + " Facade defines a higher-level interface that makes the subsystem easire to use.",
-                        Example = "Home Theatter"
+                        Example = "Home Theater"
                     };
                     return summary;
 

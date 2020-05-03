@@ -7,6 +7,7 @@ using DesignPatternsLibrary.SimpleFactory.PizzaStore;
 using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.AbstractFactory.PizzaIngredientFactory;
 using DesignPatternsLibrary.Command.RemoteControl;
+using DesignPatternsLibrary.Adapter.DuckAdapter;
 
 namespace DesignPatternsLibrary
 {
@@ -49,6 +50,10 @@ namespace DesignPatternsLibrary
 
                 case DesignPatternConstants.COMMAND:
                     designPattern = new RemoteLoader();
+                    break;
+
+                case DesignPatternConstants.ADAPTER:
+                    designPattern = new DuckTestDrive();
                     break;
 
                 default:
