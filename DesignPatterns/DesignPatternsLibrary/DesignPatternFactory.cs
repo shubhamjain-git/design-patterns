@@ -8,6 +8,7 @@ using DesignPatternsLibrary.FactoryMethod.PizzaStoreFranchisor;
 using DesignPatternsLibrary.AbstractFactory.PizzaIngredientFactory;
 using DesignPatternsLibrary.Command.RemoteControl;
 using DesignPatternsLibrary.Adapter.DuckAdapter;
+using DesignPatternsLibrary.Facade.HomeTheater;
 
 namespace DesignPatternsLibrary
 {
@@ -54,6 +55,10 @@ namespace DesignPatternsLibrary
 
                 case DesignPatternConstants.ADAPTER:
                     designPattern = new DuckTestDrive();
+                    break;
+
+                case DesignPatternConstants.FACADE:
+                    designPattern = new HomeTheaterTestDrive();
                     break;
 
                 default:
